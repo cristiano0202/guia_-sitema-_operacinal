@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guia de Aprendizagem em Informática</title>
+    <link rel="stylesheet" href="style.css">
+
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+
+    <meta http-equiv="X-Frame-Options" content="DENY">
+
+    <meta http-equiv="Referrer-Policy" content="no-referrer">
+
+    <meta name="robots" content="noindex,nofollow">
+
+</head>
+
+<body>
+
+    <div class="capa">
+        <h1>🖥️ Guia de Aprendizagem em Informática</h1>
+    </div>
+
+    <div class="sistemas">
+
+
+        <div class="sistema" onclick="mostrarWindows()">
+            <img src="windos.jfif" alt="Windows">
+            <h3>Windows</h3>
+        </div>
+
+    </div>
+
+    <div id="conteudo">
+
+        <div class="card">
+
+            <h2>🎓 Bem-vindo</h2>
+            <p>Iniciar Aprendizagem</p>
+
+            <ul>
+                <li>Windows</li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+    <script>
+
+        function voltarInicio() {
+
+            document.getElementById("conteudo").innerHTML = `
+
+<div class="card">
+
+<h2>🎓 Bem-vindo</h2>
+
+<p>Iniciar Aprendizagem</p>
+
+<ul>
+<li>Windows</li>
+</ul>
+
+</div>
+
+`;
+
+        }
+
+        function mostrarWindows() {
+            document.getElementById("conteudo").innerHTML = `
+
+<div class="card">
+
+<button onclick="voltarInicio()">🏠 Voltar</button>
+<button onclick="mostrarQuiz()">📝 Quiz</button>
+<h2>Curso de Windows</h2>
+
+<button onclick="mostrarAula('mouse')">🖱️ Mouse</button>
+<button onclick="mostrarAula('teclado')">⌨️ Teclado</button>
+<button onclick="mostrarAula('desktop')">🖥️ Área de Trabalho</button>
+<button onclick="mostrarAula('explorador')">📁 Explorador</button>
+<button onclick="mostrarAula('internet')">🌐 Internet</button>
+<button onclick="mostrarAula('seguranca')">🔒 Segurança</button>
+<button onclick="mostrarAula('impressora')">🖨️ Impressoras</button>
+<button onclick="mostrarAula('backup')">💾 Backup</button>
+<button onclick="mostrarAula('manutencao')">🛠️ Manutenção</button>
+
+<hr>
+
+<div id="aula">
+<h3>📚 Escolha uma aula</h3>
+</div>
+
+</div>
+
+`;
+
+        }
+        function abrirImagem(src) {
+            document.getElementById("modalImagem").style.display = "block";
+            document.getElementById("imagemGrande").src = src;
+        }
+
+        function fecharImagem() {
+            document.getElementById("modalImagem").style.display = "none";
+        }
+        function mostrarAula(tipo) {
+
+            let aula = document.getElementById("aula");
+
+            if (tipo == "mouse") {
+                aula.innerHTML = `
+
+<h3>🖱️ mouse</h3>
+
+<img src="MAUSE.avif"
+     alt="Mouse"
+     class="miniatura"
+     draggable="false"
+     onclick="abrirImagem(this.src)">
+
+<h4>🖱️ Botões Principais</h4>
+
+<ul>
+<li><b>Botão Esquerdo</b> → Selecionar e abrir arquivos</li>
+<li><b>Botão Direito</b> → Exibir menu de opções</li>
+<li><b>Scroll</b> → Rolar páginas e documentos</li>
+<li><b>Scroll Clique</b> → Abrir links em nova guia</li>
+</ul>
+
+<h4>⚡ Funções do Mouse</h4>
+
+<ul>
+<li>🖱️ Clique simples</li>
+<li>🖱️🖱️ Duplo clique</li>
+<li>📦 Arrastar e soltar arquivos</li>
+<li>📂 Selecionar objetos</li>
+<li>🌐 Navegar em páginas da internet</li>
+</ul>
+<h4>📝 Minhas Anotações</h4>
+
+<textarea
+    id="anotacoes"
+    rows="5"
+    cols="50"
+    placeholder="Digite suas anotações aqui">
+</textarea>
+`;
+            }
+            else if (tipo == "teclado") {
+                aula.innerHTML = `
+
+<h3>⌨️ Teclado</h3>
+
+<img src="TECLADO_.jpg"
+     alt="Teclado"
+     class="miniatura"
+      draggable="false"
+     onclick="abrirImagem(this.src)">
+<p>
+O teclado é o principal dispositivo de entrada de dados do computador.
+</p>
+
+<h4>🔑 Teclas Principais</h4>
+
+<ul>
+<li><b>Enter</b> → Confirmar ação ou pular linha</li>
+<li><b>Esc</b> → Cancelar ou sair</li>
+<li><b>Backspace</b> → Apagar à esquerda</li>
+<li><b>Delete</b> → Apagar à direita</li>
+<li><b>Tab</b> → Mudar de campo</li>
+<li><b>Shift</b> → Letras maiúsculas temporárias</li>
+<li><b>Caps Lock</b> → Travar letras maiúsculas</li>
+<li><b>Ctrl</b> → Utilizada em atalhos</li>
+<li><b>Alt</b> → Funções especiais</li>
+<li><b>Windows</b> → Abrir Menu Iniciar</li>
+</ul>
+
+<h4>⚡ Atalhos Importantes</h4>
+
+<ul>
+<li>Ctrl + C → Copiar</li>
+<li>Ctrl + V → Colar</li>
+<li>Ctrl + X → Recortar</li>
+<li>Ctrl + Z → Desfazer</li>
+<li>Ctrl + A → Selecionar tudo</li>
+<li>Ctrl + S → Salvar</li>
+<li>Alt + Tab → Alternar janelas</li>
+<li>Windows + E → Abrir Explorador</li>
+<li>Windows + D → Mostrar Área de Trabalho</li>
+</ul>
+
+</div>
+<h4>📝 Minhas Anotações</h4>
+
+<textarea
+    id="anotacoes"
+    rows="5"
+    cols="50"
+    placeholder="Digite suas anotações aqui">
+</textarea>
+`;
+            }
+            else if (tipo == "desktop") {
+                aula.innerHTML = `
+<h3>🖥️ Área de Trabalho</h3>
+
+     <img src="aria.jpg"
+     class="miniatura"
+      draggable="false"
+     onclick="abrirImagem(this.src)">
+
+<p>A Área de Trabalho é a tela principal do Windows.</p>
+
+<ul>
+<li>📂 Acessar atalhos</li>
+<li>🗑️ Lixeira</li>
+<li>📁 Pastas</li>
+<li>⚙️ Configurações</li>
+</ul>
+<h4>📝 Minhas Anotações</h4>
+
+<textarea
+    id="anotacoes"
+    rows="5"
+    cols="50"
+    placeholder="Digite suas anotações aqui">
+</textarea>
+`;
+            }
+
+            else if (tipo == "explorador") {
+                aula.innerHTML = `
+<h3>📁 Explorador de Arquivos</h3>
+
+     <img src="Explorador de Arquivo.jpg"
+     class="miniatura"
+     draggable="false"
+     onclick="abrirImagem(this.src)">
+<p>Permite navegar pelas pastas e arquivos do computador.</p>
+
+<ul>
+<li>📂 Abrir pastas</li>
+<li>📄 Criar arquivos</li>
+<li>✂️ Copiar e mover</li>
+<li>🗑️ Excluir arquivos</li>
+</ul>
+<h4>📝 Minhas Anotações</h4>
+
+<textarea
+    id="anotacoes"
+    rows="5"
+    cols="50"
+    placeholder="Digite suas anotações aqui">
+</textarea>
+`;
+            }
+
+            else if (tipo == "internet") {
+                aula.innerHTML = `
+<h3>🌐 Internet</h3>
+
+     <img src="internet.jpg"
+     class="miniatura"
+     draggable="false"
+     onclick="abrirImagem(this.src)">
+<p>A internet permite acessar sites e serviços online.</p>
+
+<ul>
+<li>🔎 Pesquisas</li>
+<li>📧 E-mails</li>
+<li>🎥 Vídeos</li>
+<li>☁️ Armazenamento em nuvem</li>
+</ul>
+<h4>📝 Minhas Anotações</h4>
+
+<textarea
+    id="anotacoes"
+    rows="5"
+    cols="50"
+    placeholder="Digite suas anotações aqui">
+</textarea>
+`;
+            }
+
+            else if (tipo == "seguranca") {
+                aula.innerHTML = `
+<h3>🔒 Segurança</h3>
+      <img src="seguranca.jpg"
+      class="miniatura"
+      draggable="false"
+      onclick="abrirImagem(this.src)">
+
+
+<p>Proteja seu computador contra ameaças.</p>
+
+<ul>
+<li>🛡️ Antivírus</li>
+<li>🔑 Senhas fortes</li>
+<li>⬆️ Atualizações</li>
+<li>🚫 Evitar arquivos suspeitos</li>
+</ul>
+<h4>📝 Minhas Anotações</h4>
+
+<textarea
+    id="anotacoes"
+    rows="5"
+    cols="50"
+    placeholder="Digite suas anotações aqui">
+</textarea>
+`;
+            }
+
+            else if (tipo == "impressora") {
+                aula.innerHTML = `
+<h3>🖨️ Impressoras</h3>
+
+      <img src="inpressora.jpg"
+      class="miniatura"
+      draggable="false"
+      onclick="abrirImagem(this.src)">
+
+<p>Utilizadas para imprimir documentos e imagens.</p>
+
+<ul>
+<li>📝 Imprimir documentos</li>
+<li>🎨 Imprimir fotos</li>
+<li>⚙️ Configurar impressora</li>
+<li>📄 Ver fila de impressão</li>
+</ul>
+<h4>📝 Minhas Anotações</h4>
+
+<textarea
+    id="anotacoes"
+    rows="5"
+    cols="50"
+    placeholder="Digite suas anotações aqui">
+</textarea>
+`;
+            }
+
+            else if (tipo == "backup") {
+                aula.innerHTML = `
+<h3>💾 Backup</h3>
+
+      <img src="backup.jpg"
+      class="miniatura"
+      draggable="false"
+      onclick="abrirImagem(this.src)">
+<p>Backup é uma cópia de segurança dos arquivos.</p>
+
+<ul>
+<li>💽 HD Externo</li>
+<li>☁️ Google Drive</li>
+<li>☁️ OneDrive</li>
+<li>🔄 Recuperação de dados</li>
+</ul>
+<h4>📝 Minhas Anotações</h4>
+
+<textarea
+    id="anotacoes"
+    rows="5"
+    cols="50"
+    placeholder="Digite suas anotações aqui">
+</textarea>
+`;
+            }
+
+            else if (tipo == "manutencao") {
+                aula.innerHTML = `
+<h3>🛠️ Manutenção</h3>
+
+      <img src="manutencao.jpeg"
+      class="miniatura"
+      draggable="false"
+      onclick="abrirImagem(this.src)">
+
+<p>Ajuda a manter o computador rápido e seguro.</p>
+
+<ul>
+<li>🧹 Limpeza de arquivos</li>
+<li>⬆️ Atualizações</li>
+<li>🛡️ Verificação antivírus</li>
+<li>⚡ Otimização do sistema</li>
+</ul>
+<h4>📝 Minhas Anotações</h4>
+
+<textarea
+    id="anotacoes"
+    rows="5"
+    cols="50"
+    placeholder="Digite suas anotações aqui">
+</textarea>
+`;
+
+            }
+
+        }
+
+        function mostrarQuiz() {
+            let quizCorrigido = false;
+            document.getElementById("aula").innerHTML = `
+
+<h2>📝 Quiz de Windows</h2>
+
+<p><b>1.</b> Qual tecla abre o Menu Iniciar?</p>
+<input type="radio" name="q1" value="errado"> Ctrl<br>
+<input type="radio" name="q1" value="certo"> Windows<br>
+<input type="radio" name="q1" value="errado"> Alt<br><br>
+
+<p><b>2.</b> Qual atalho copia um arquivo?</p>
+<input type="radio" name="q2" value="certo"> Ctrl + C<br>
+<input type="radio" name="q2" value="errado"> Ctrl + X<br>
+<input type="radio" name="q2" value="errado"> Ctrl + Z<br><br>
+
+<p><b>3.</b> Para que serve a Lixeira?</p>
+<input type="radio" name="q3" value="errado"> Navegar na internet<br>
+<input type="radio" name="q3" value="certo"> Armazenar arquivos excluídos<br>
+<input type="radio" name="q3" value="errado"> Instalar programas<br><br>
+
+<p><b>4.</b> Qual programa protege contra vírus?</p>
+<input type="radio" name="q4" value="certo"> Antivírus<br>
+<input type="radio" name="q4" value="errado"> Paint<br>
+<input type="radio" name="q4" value="errado"> Bloco de Notas<br><br>
+
+<p><b>5.</b> O que é Backup?</p>
+<input type="radio" name="q5" value="errado"> Formatar HD<br>
+<input type="radio" name="q5" value="certo"> Cópia de segurança<br>
+<input type="radio" name="q5" value="errado"> Instalar Windows<br><br>
+
+<p><b>6.</b> Qual atalho cola arquivos?</p>
+<input type="radio" name="q6" value="errado"> Ctrl + C<br>
+<input type="radio" name="q6" value="certo"> Ctrl + V<br>
+<input type="radio" name="q6" value="errado"> Ctrl + A<br><br>
+
+<p><b>7.</b> Qual tecla apaga caracteres à esquerda?</p>
+<input type="radio" name="q7" value="certo"> Backspace<br>
+<input type="radio" name="q7" value="errado"> Enter<br>
+<input type="radio" name="q7" value="errado"> Shift<br><br>
+
+<p><b>8.</b> O Explorador de Arquivos serve para:</p>
+<input type="radio" name="q8" value="certo"> Gerenciar arquivos e pastas<br>
+<input type="radio" name="q8" value="errado"> Navegar na internet<br>
+<input type="radio" name="q8" value="errado"> Tocar música<br><br>
+
+<p><b>9.</b> Qual atalho seleciona tudo?</p>
+<input type="radio" name="q9" value="errado"> Ctrl + V<br>
+<input type="radio" name="q9" value="certo"> Ctrl + A<br>
+<input type="radio" name="q9" value="errado"> Ctrl + D<br><br>
+
+<p><b>10.</b> Qual atalho mostra a Área de Trabalho?</p>
+<input type="radio" name="q10" value="certo"> Windows + D<br>
+<input type="radio" name="q10" value="errado"> Ctrl + D<br>
+<input type="radio" name="q10" value="errado"> Alt + D<br><br>
+
+<button onclick="corrigirQuiz()">✅ Corrigir Quiz</button>
+
+<div id="resultadoQuiz"></div>
+
+`;
+
+        }
+        function corrigirQuiz() {
+            let quizCorrigido = false;
+            if (quizCorrigido) {
+                return;
+            }
+            for (let i = 1; i <= 10; i++) {
+
+                let resposta = document.querySelector('input[name="q' + i + '"]:checked');
+
+                if (!resposta) {
+
+                    alert("⚠️ Responda todas as perguntas antes de corrigir o Quiz!");
+
+                    return;
+
+                }
+
+            }
+
+            let nota = 0;
+
+            for (let i = 1; i <= 10; i++) {
+
+                let resposta = document.querySelector('input[name="q' + i + '"]:checked');
+
+                if (resposta.value === "certo") {
+                    nota++;
+                }
+
+            }
+
+            document.getElementById("resultadoQuiz").innerHTML = `
+
+<h2>🎯 Sua Nota: ${nota}/10</h2>
+
+<h3>✅ Gabarito</h3>
+
+<ol>
+<li>Windows</li>
+<li>Ctrl + C</li>
+<li>Armazenar arquivos excluídos</li>
+<li>Antivírus</li>
+<li>Cópia de segurança</li>
+<li>Ctrl + V</li>
+<li>Backspace</li>
+<li>Gerenciar arquivos e pastas</li>
+<li>Ctrl + A</li>
+<li>Windows + D</li>
+</ol>
+
+`;
+            let resultado = `
+<h2>🎯 Sua Nota: ${nota}/10</h2>
+
+<h3>📋 Resultado</h3>
+
+<p>${document.querySelector('input[name="q1"]:checked').value == "certo" ? "✅ Questão 1 - Correta" : "❌ Questão 1 - Errada (Resposta: Windows)"}</p>
+
+<p>${document.querySelector('input[name="q2"]:checked').value == "certo" ? "✅ Questão 2 - Correta" : "❌ Questão 2 - Errada (Resposta: Ctrl + C)"}</p>
+
+<p>${document.querySelector('input[name="q3"]:checked').value == "certo" ? "✅ Questão 3 - Correta" : "❌ Questão 3 - Errada (Resposta: Armazenar arquivos excluídos)"}</p>
+
+<p>${document.querySelector('input[name="q4"]:checked').value == "certo" ? "✅ Questão 4 - Correta" : "❌ Questão 4 - Errada (Resposta: Antivírus)"}</p>
+
+<p>${document.querySelector('input[name="q5"]:checked').value == "certo" ? "✅ Questão 5 - Correta" : "❌ Questão 5 - Errada (Resposta: Cópia de segurança)"}</p>
+
+<p>${document.querySelector('input[name="q6"]:checked').value == "certo" ? "✅ Questão 6 - Correta" : "❌ Questão 6 - Errada (Resposta: Ctrl + V)"}</p>
+
+<p>${document.querySelector('input[name="q7"]:checked').value == "certo" ? "✅ Questão 7 - Correta" : "❌ Questão 7 - Errada (Resposta: Backspace)"}</p>
+
+<p>${document.querySelector('input[name="q8"]:checked').value == "certo" ? "✅ Questão 8 - Correta" : "❌ Questão 8 - Errada (Resposta: Gerenciar arquivos e pastas)"}</p>
+
+<p>${document.querySelector('input[name="q9"]:checked').value == "certo" ? "✅ Questão 9 - Correta" : "❌ Questão 9 - Errada (Resposta: Ctrl + A)"}</p>
+
+<p>${document.querySelector('input[name="q10"]:checked').value == "certo" ? "✅ Questão 10 - Correta" : "❌ Questão 10 - Errada (Resposta: Windows + D)"}</p>
+`;
+
+            document.getElementById("resultadoQuiz").innerHTML = resultado;
+            quizCorrigido = true;
+
+            document.querySelectorAll("input").forEach(item => {
+                item.disabled = true;
+            });
+
+        }
+
+        document.addEventListener("keydown", function (e) {
+
+            if (e.key === "F12") {
+                e.preventDefault();
+                alert("🔒 Ferramentas de desenvolvedor bloqueadas.");
+            }
+
+        });
+
+        document.addEventListener("keydown", function (e) {
+
+            if (e.key === "F12") {
+                e.preventDefault();
+            }
+
+            if (e.ctrlKey && e.shiftKey && e.key === "I") {
+                e.preventDefault();
+            }
+
+            if (e.ctrlKey && e.key === "u") {
+                e.preventDefault();
+            }
+
+        });
+
+        document.addEventListener("contextmenu", function (e) {
+            e.preventDefault();
+        });
+
+    </script>
+
+    <div id="modalImagem" class="modal">
+        <span class="fechar" onclick="fecharImagem()">&times;</span>
+
+        <img id="imagemGrande" class="modal-conteudo">
+    </div>
+
+</body>
+
+<footer>
+    © 2026 - Guia de Aprendizagem em Informática
+</footer>
+
+</html>
